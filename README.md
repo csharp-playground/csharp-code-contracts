@@ -1,8 +1,8 @@
-## Code Contracts in `C#`
+### Code Contracts in `C#`
 
 - http://www.dotnetcurry.com/csharp/1172/code-contracts-csharp-static-runtime-checks
 
-## Example
+### Example
 
 ```csharp
 class Calculators {
@@ -27,11 +27,11 @@ class Validation {
 
 ### Contract.Requires(condition, message)
 
-ใช้เป็น `precondition` ก่อนที่จะ execute คำสั่งใน method เมื่อ condition มีค่าเป็น false จะแสดง message ออกมา
+เป็น `precondition` ก่อนที่จะ execute คำสั่งใน method เมื่อ condition มีค่าเป็น false จะแสดง message ออกมา
 
 ### Contract.Requires<T>(condition, message)
 
-`T` เป็น class Exception จะ `condition` เป็น false โปรแกรมจะ throw T ออกมา แต่ถ้ามีการตั้งค่า Assert on contract โปรแกรมจะแสดง mesasge ออกมาแทน
+`T` เป็น Exception type เมื่อ `condition` เป็น false โปรแกรมจะ throw T แต่ถ้าตั้ง Assert on contract โปรแกรมจะแสดง message ออกมาแทน
 
 ### Contract.Result<T>()
 
@@ -39,7 +39,7 @@ class Validation {
 
 ### Contract.Ensures(condition)
 
-ใช้เป็น `postcondition` เพื่อเช็คว่าค่าที่ return ออกไปตรงกับเงื่อนไขหรือไม่
+เป็น `postcondition` เช็คว่าค่าที่ return ออกไปตรงกับเงื่อนไขหรือไม่
 
 ### Contract.Invariants()
 
