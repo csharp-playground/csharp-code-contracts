@@ -25,23 +25,23 @@ class Validation {
 }
 ```
 
-- Contract.Requires(condition, message)
+### Contract.Requires(condition, message)
 
 ใช้เป็น `precondition` ก่อนที่จะ execute คำสั่งใน method เมื่อ condition มีค่าเป็น false จะแสดง message ออกมา
 
-- Contract.Requires<T>(condition, message)
+### Contract.Requires<T>(condition, message)
 
 `T` เป็น class Exception จะ `condition` เป็น false โปรแกรมจะ throw T ออกมา แต่ถ้ามีการตั้งค่า Assert on contract โปรแกรมจะแสดง mesasge ออกมาแทน
 
-- Contract.Result<T>()
+### Contract.Result<T>()
 
 ใชั `Contract.Result<T>` เพื่อดึงค่าที่จะ return ออกจาก method ใช้สำหรับเช็ค `postcondition` สามารถใช้ร่วมกับ `Contract.Ensures()`
 
-- Contract.Ensures(condition)
+### Contract.Ensures(condition)
 
 ใช้เป็น `postcondition` เพื่อเช็คว่าค่าที่ return ออกไปตรงกับเงื่อนไขหรือไม่
 
-- Contract.Invariants()
+### Contract.Invariants()
 
 ...
 
